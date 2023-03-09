@@ -1,0 +1,106 @@
+== 04 - Execució d'un programa en pantalla
+Q.Serrano <quique.srrn@gmail.com>; QODE66
+
+:icons: image
+:iconsdir: ./../icons
+:imagesdir: ./../media
+:figure-caption!: 
+
+=== Finalitat
+
+La lliçó pretén introduir el concepte d’escenari al mateix temps que dibuixar els «Vestits». També a usar els blocs que fan que es visualitze en pantalla un vestit determinat. Així podrem visualitzar en el monitor del nostre PC com funciona el nostre programa i comprovar que succeeix el mateix que en el LED del nostre Arduino.
+
+=== Material
+
+[cols=",",]
+|===
+|image:mat-01.jpeg[title="ArduinoUNO",width=56,height=56]
+|Arduino Uno o compatible amb S4A i amb el firmware per S4A carregat.
+
+|
+image:mat-02.jpeg[image,title="cableusb",width=60,height=56]
+|Un cable USB adequat al connector del teu *Arduino*.
+
+|
+image:mat-03.jpeg[image,title="pc",width=77,height=56]
+|Un PC amb l’entorn *S4A* correctament instal·lat i configurat.
+|===
+
+=== Concepte de escenari i Vestits
+
+En l'escenari podem veure en el monitor del nostre PC com es desenvolupa el nostre programa. És la pantalla en blanc que hi ha a dalt a la dreta, on apareix per defecte un dibuix de la placa Arduino. Aqueix dibuix és un exemple del que anomenem “Vestits” en S4A.
+
+El que volem aconseguir és que en eixa pantalla aparega un dibuix o una foto que represente un LED encès quan s'encenga el LED, i un apagat quan estiga apagat. Per a aconseguir-ho usarem les “Vestits”.
+
+[.text-center]
+image:04-01.png[image,title="scratch-for-arduino",width=358,height=217]
+
+=== Dibuixant les Vestits
+
+[.text-center]
+image:04-02.png[title="pestanya vestits"]
+
+El primer que farem serà anar a la pestanya “*Vestits*”. Ací podem veure que l'únic que hi ha és un dibuix d'una placa Arduino. que ve per defecte. Per a dibuixar un vestit nou farem clic en el botó “*Dibuixa*”.
+
+[.text-center]
+image:04-03.png[title="dibuixant un cercle"]
+
+Arribarem a una pantalla molt semblant al programa Paint de Windows.
+
+Amb ella dibuixarem un cercle roig que representarà el nostre díode LED encès:
+
+* Premem el botó que té forma de cercle i seleccionem el cercle buit que apareix davall.
+* Premem en el botó del poal, seleccionem el color roig i emplenem el cercle.
+* Donem a acceptar.
+
+[.text-center]
+image:04-04.png[title="cambiando el disfraz"]
+
+Una vegada acceptat tornarem a la pantalla de” Vestits” i li canviarem
+el nom al “vestit1” per “led_on”.
+
+[.text-center]
+image:04-05.png[title="canvi de nom"]
+
+Ens queda dibuixar el vestit que representarà el díode LED apagat. Per a
+fer-ho, en comptes de crear un de nou copiarem l'anterior i ho
+emplenarem de gris.
+
+* Premem el botó “Copia” que hi ha en la figura “led_on” que hem creat.
+Se'ns crearà una nova figura idèntica.
+* Li donem a “Editar” en la nova figura que hem creat i emplenem el
+cercle de gris.
+* Canviem el nom de la figura per “led_off”.
+
+Si en comptes de dibuixar-los preferiu usar una imatge que tingueu
+guardat en l'ordinador o alguna de les quals venen predefinides en S4A,
+bé siga un dibuix o una foto, podeu utilitzar el botó de “Importar” en
+comptes de “Dibuixa”.
+
+=== Incloent les Vestits en el nostre programa
+
+[.text-center]
+image:04-06.png[title="incloent vestits"]
+
+El que volem és que quan s'encenga el LED, en l'escenari es visualitze el vestit “led_on”, i quan s'apague el vestit  "led_off”. Els blocs relacionats amb els Vestits estan en el grup “*Aspecte*”. En aquest cas usarem el bloc “*canvia el vestit a*”.
+
+* Com volem que això passe immediatament alhora que l'encesa o apagada hem de col·locar-lo just davall dels blocs d'encendre i apagar. També valdria col·locar-ho just damunt.
+* Recordeu que les instruccions es duen a terme de manera seqüencial, una immediatament darrere d'una altra, mentre no li indiquem el contrari.
+* Seleccionarem “led_on” en el bloc de “canviar el vestit a” després d'encendre'l, i “led_off” després d'apagar-ho.
+* Aquesta vegada perquè el programa espere usarem el bloc de “Aspecte” “pensar Hmm… per 2 segons”. També podem canviar el temps que volem que espere i el missatge que volem que es veja mentre espera.
+
+Ja només ens queda donar a la bandera verda i comprovar que el nostre programa funciona correctament. Veurem que mentre espera podem veure el missatge que hem escrit en el bloc “pensar mmm… per 2 segons”.
+
+[.text-center]
+image:04-07.png[title="ejemplo-completo"]
+
+
+=== Conceptes importants
+
+* A dibuixar Vestits.
+* Incloure les Vestits en el nostre programa.
+* Visualitzar en la pantalla del nostre PC l'estat del nostre programa.
+
+* link:S4A-05.adoc[05 - ]
+* link:index.adoc[Index]
+* link:./../README.adoc[README]

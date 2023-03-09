@@ -1,0 +1,106 @@
+= 09 - Sensor de cop i de vibració
+Q.Serrano <qserrano@protonmail.com>; QODE66
+
+:imagesdir: ./imatges
+:figure-caption!: 
+
+
+== Finalitat
+
+Presentar el sensor de cop i de vibració (KY-002 i KY-031), a més de
+continuar treballant les entrades digitals per saber detectar senyals
+molt breus.
+
+== Material
+
+[cols="<1,<2,<1,<2",]
+|====
+|image:mat_arduinouno.jpeg[image,width=56,height=56]
+|Una placa Arduino UNO o equivalent
+|image:mat_KY002.png[image,width=57,height=56]
+|Un mòdul KY-002, sensor de cop
+
+|image:mat_protoboard.jpeg[image,width=56,height=56]
+|Una placa protoboard
+|image:mat_KY031.jpg[image,width=56,height=56]
+|Un mòdul KY-031, detector de vibració
+
+|image:mat_cables.jpeg[image,width=56,height=56]
+|Uns quants cables | |
+|====
+
+== ¿Cóm funcionen els mòduls?
+
+El mòdul del conmutador de vibració KY-002 (vibration switch module)
+exteriorment presenta una forma cilíndrica. Les dues parts actives a
+l’interior del sensor són un moll conductor al centre envoltat per una
+placa també conductora. Aquesta configuració fa que quan s’aplica
+qualsevol tipus de xoc al mòdul, la molla entra en contacte amb la
+coberta cilíndrica i el circuit es tanca.
+
+El mòdul sensor de cop KY-031 és similar al mòdul de vibració. La
+diferència principal entre aquests dos és la seva sensibilitat. El
+sensor de vibració detecta fins i tot un xoc petit, mentre que el sensor
+de cops requereix un cop potent o una sacsejada per activar-lo.
+
+Els dos mòduls porten una resistència de 10 K Ohm incorporada entre el
+pin central i el pin "S" per a ser usat com a muntatge *pull up o pull
+down** *segons es requerisca. Els contactes de l'interruptor connecten
+els dos pins externs.
+
+Tots dos mòduls canvien l’estat del connector de eixida quan detecten el
+cop o vibració i el mantenen únicament mentre dura la pertorbació, és a
+dir, s’obté una senyal d’una durada molt breu. Si fem el muntatge
+habitual tindrem una configuració pull up, la eixida estarà a l’estat
+alt fins que el sensor s’active que passarà a estat baix.
+
+== Muntatge
+
+L’esquema electrònic és molt senzill, com que tenim una senyal digital
+l’arreplegarem per l’entrada 2 i aprofitarem el led de la placa arduino,
+connectat al pin 13 per veure la eixida.
+
+[.float-group]
+--
+[.left]
+image::ard_09_01.png[image,title="Esquema elèctric",width=174,height=189]
+
+[.right]
+image::ard_09_02.png[image,title="Esquema de muntatge",width=174]
+--
+
+== Programació
+
+https://mega.nz/file/zH50jZSA#Gbca6SZeRur9xD9DENVvErfpQuec8Xo_z0XxLMl3has[Codi:ARD_09_01]
+
+[source, Arduino]
+----
+int Led = 13; //assigna a la variable Led el valor de 13
+int buttonpin = 2; //assigna a la variable buttonpin el valor 2
+int val; //defineix val com enter
+
+void setup()
+{
+    pinMode(Led, OUTPUT); //defineix el pin 13 com eixida
+    pinMode(buttonpin, INPUT); //defineix el pin 2 com entrada digital
+}
+
+void loop()
+{
+    val = digitalRead(buttonpin); //llig el valor de l'entrada 2 i l'assigna a la variable val
+    if (val = HIGH) //comproba si el sensor s'activat, recordeu que si detecta l'entrada 2 passara a estat baix
+        {
+            digitalWrite(Led, LOW);
+        }
+    else //quan el sensor envia senyal, el led 13 s'encen durant 2 segons
+        {
+            digitalWrite(Led, HIGH);
+            delay(2000);
+        }
+}
+----
+
+== Conceptes importants
+
+* Detecció de senyals molt breus
+* Muntatge pull-up i pull-down
