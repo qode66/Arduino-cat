@@ -1,6 +1,6 @@
 # arduino-basic
 
-## Benvingut al curs bàsic d'Arduino!
+## Benvingut al curs bàsic d'Arduino
 
 En aquest repositori trobaràs tot el material necessari per aprendre les bases de programació amb Arduino. Aquest curs està dirigit a persones amb poca o cap experiència prèvia en programació o electrònica, però també pot ser útil per a aquells que vulguin refrescar les seves habilitats.
 
