@@ -1,8 +1,11 @@
-= Curs Scratch for Arduino S4A
+# Curs Scratch for Arduino S4A
 
-link:./docs/index.adoc[Contingut del curs]
+[img1]: ./Imatges/s4alogo.png "S4A"
+[img2]: ./Imatges/arduinologo.png "Arduino"
 
-== Objectiu
+[Contingut del curs](./docs/index.adoc)
+
+## Objectiu
 
 L'objectiu d'aquest curs és ajudar a acostar-se al món de la programació a qualsevol que vulga començar, especialment als més xicotets, d'una forma atractiva i divertida, mitjançant l'ús de l'entorn gràfic de programació S4A (Scratch for Arduino).
 
@@ -10,8 +13,7 @@ D'altra banda, dotar als col·legis i docents en general, d'unes unitats didàct
 
 Per això el curs està ordenat de manera que es puga començar sense cap coneixement previ i vaja avançant presentant conceptes i competències bàsiques que permeten avançar amb sòl ferm fins a un punt en què pugues escometre els teus propis projectes amb garanties d'èxit.
 
-[.text-center]
-image:./../icons/s4alogo.png[]
+![Logo S4A][img1]
 
 Scratch està dissenyat per a ser senzill d'usar i amb els més xiquets en ment (Entre 8 i 15 anys) de manera que puguen iniciar-se a la programació d'una manera divertida i que resulte atraient, però molts pares sense coneixements previs de programació probablement se sorprenen en veure que també ells són capaces de fer programes mitjanament complexos i entenent el que fan i no simplement copiant.
 
@@ -19,14 +21,13 @@ El coneixement de la programació està començant a formar part de les competè
 
 Scratch for Arduino S4A és un entorn senzill i divertit per als alumnes mes joves, que els inicia en aqueix camí i els introdueix a els conceptes inherents a la programació estructurada d'una manera que sembla un joc, però amb moltes mes profunditat del que a primera vista es percep.
 
-== ¿Què és Arduino?
+## ¿Què és Arduino?
 
-[.text-center]
-image:./../icons/arduinologo.png[225, 153]
+![Logo Arduino][img2]
 
 Arduino és una plataforma de codi obert basada en una placa amb un micro controlador i un entorn de desenvolupament. Es va desenvolupar amb la idea de facilitar la creació de tota mena de projectes d'electrònica i fer-ho accessible als no professionals.
 
-Simplificant podríem dir que un *Arduino és un xicotet ordinador les funcions principals del qual són:
+Simplificant podríem dir que un Arduino és un xicotet ordinador les funcions principals del qual són:
 
 - Recollir en el microcontrolador la informació dels perifèrics.
 - Processar aqueixes dades d'acord amb les nostres instruccions.
@@ -42,13 +43,13 @@ D'entre totes les plataformes de maquinari lliure, hem triat Arduino perquè ofe
 - És compatible amb moltíssims perifèrics de tota mena.
 - Té infinitat d'aplicacions.
 
-== ENTORNS GRÀFICS DE PROGRAMACIÓ
+## ENTORNS GRÀFICS DE PROGRAMACIÓ
 
 Un programa consisteix en una sèrie d'instruccions que s'executen de manera seqüencial. Per això les instruccions han de ser:
 
 - Precisa: Sense les ambigüitats inherents a la comunicació humana.
 - Univoca: Només es pot interpretar d'una manera.
-- Concisa: Preferiblement ordres curtes 
+- Concisa: Preferiblement ordres curtes
 
 Programar es podria resumir com proporcionar-li aqueixes instruccions a una màquina perquè faça el que nosaltres vulguem. Per a poder comunicar-nos amb ella necessitem un llenguatge comú. A això li diem llenguatge de programació.
 
@@ -62,4 +63,4 @@ Al llarg d'aquest curs utilitzarem l'entorn gràfic Scratch for Arduino (S4A), b
 
 - S4A és compatible amb les plaques Arduino Uno, Diecimilia i Duemilanove i funciona en els sistemes operatius més populars: Windows, Linux i MacOS.
 - És important saber que la nostra placa Arduino només executarà el programa mentre estiga connectada al PC.
-- Amb S4A no podem connectar la placa Arduino a una font d'alimentació i que continue executant l'últim programa que li hem carregat 
+- Amb S4A no podem connectar la placa Arduino a una font d'alimentació i que continue executant l'últim programa que li hem carregat

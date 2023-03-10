@@ -1,5 +1,0 @@
-= Index
-
-* link:S4A-01.adoc[01 - Instal·lació de l\'entorn gràfic S4A]
-* link:S4A-02.adoc[02 - El nostre primer programa Scratch]
-* link:S4A-03.adoc[03 - El nostre primer circuit]
