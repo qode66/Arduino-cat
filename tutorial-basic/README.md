@@ -1,14 +1,8 @@
-# arduino-basic
+# Tutorial Arduino bàsic
 
-## Benvingut al curs bàsic d'Arduino
+- [Contingut](index.md)
 
 En aquest repositori trobaràs tot el material necessari per aprendre les bases de programació amb Arduino. Aquest curs està dirigit a persones amb poca o cap experiència prèvia en programació o electrònica, però també pot ser útil per a aquells que vulguin refrescar les seves habilitats.
-
-El contingut del curs està organitzat en diverses carpetes:
-
-- Docs: aquí trobaràs els diferents documents de les lliçons. Cada lliçó inclou una breu explicació teòrica i diversos exemples pràctics per a practicar.
-- Exemples: aquesta carpeta conté diversos exemples de codi que es van treballant durant el curs. Aquests exemples són útils per entendre millor els conceptes teòrics.
-- Recursos: aquesta carpeta conté recursos addicionals per ajudar-te en el curs, com ara fulls de referència i enllaços a altres recursos.
 
 Per fer aquest curs necessitaràs una placa d'Arduino i alguns components electrònics bàsics com resistències, leds i botons. Si no tens aquests materials, pots comprar-los en línia o a una botiga local de components electrònics.
 
